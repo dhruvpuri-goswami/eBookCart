@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="0dp"
+            android:layout_gravity="start"
+            android:src="@drawable/logo_short" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BookCart"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/app_yellow"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:background="@color/app_bg"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/notifications" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:background="@drawable/profile_round"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:src="@drawable/person" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_container"
+        tools:context=".CheckoutActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout Here"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:background="@color/app_pink_light">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal :"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/app_bg"
+                        android:layout_marginTop="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:id="@+id/subtotal"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="$ 133.92"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/app_bg"
+                        android:layout_marginTop="16dp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping :"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/app_bg"
+                        android:layout_marginTop="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/shipping"
+                        android:layout_height="wrap_content"
+                        android:text="$ 10.00"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/app_bg"
+                        android:layout_marginTop="16dp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total :"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/app_bg"
+                        android:layout_marginTop="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/total"
+                        android:text="$ 143.92"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="18sp"
+                        android:textColor="@color/app_bg"
+                        android:layout_marginTop="16dp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@color/nav_bar"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:gravity="center_horizontal"
+                    android:background="@color/app_green_light">
+
+                    <RadioButton
+                        android:id="@+id/card_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Credit Card"
+                        android:textSize="20sp"
+                        android:textColor="@color/app_bg"
+                        android:checked="true" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:background="@color/app_blue_light">
+
+                    <RadioButton
+                        android:id="@+id/paypal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Paypal"
+                        android:textSize="20sp"
+                        android:textColor="@color/app_bg"
+                        android:checked="false"
+                        android:clickable="false"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Credit Card Information"
+                    android:textSize="20sp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="Name on Card"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/white"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/montserrat_medium" />
+
+                <EditText
+                    android:id="@+id/credit_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="Card Number"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/white"
+                    android:inputType="number"
+                    android:fontFamily="@font/montserrat_medium" />
+
+                <EditText
+                    android:id="@+id/expiry_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="Expiry Date"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/white"
+                    android:inputType="date"
+                    android:fontFamily="@font/montserrat_medium" />
+
+                <EditText
+                    android:id="@+id/cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="CVV"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/white"
+                    android:inputType="numberPassword"
+                    android:fontFamily="@font/montserrat_medium" />
+
+                <CheckBox
+                    android:id="@+id/save_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Save Card for Further Payments"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/check_out_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:background="@color/app_yellow"
+                    android:text="Check Out"
+                    android:textColor="@color/app_bg"
+                    android:fontFamily="@font/montserrat_bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

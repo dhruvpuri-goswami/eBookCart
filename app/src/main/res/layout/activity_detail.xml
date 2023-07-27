@@ -1,0 +1,299 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailActivity"
+    android:background="@color/app_bg">
+
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="0dp"
+            android:layout_gravity="start"
+            android:src="@drawable/logo_short" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BookCart"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/app_yellow"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:background="@color/app_bg"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/notifications" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:background="@drawable/profile_round"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:src="@drawable/person" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buy_now_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_pink_light"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/detail_book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text=""
+                    android:textColor="@color/app_bg"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/detail_book_img"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/app_blue_light"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/detail_book_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text=""
+                    android:textColor="@color/app_bg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:stretchColumns="*">
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Price"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_price"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Edition"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_edition"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Language"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_language"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Rating"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_rating"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Description"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_description"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:lineHeight="@dimen/_20sdp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Total Purchases"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_total_ratings"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Reading Age"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_reading_age"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Return Policy"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_book_return"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buy_now_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/app_yellow"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Buy Now"
+        android:textColor="@color/app_bg"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

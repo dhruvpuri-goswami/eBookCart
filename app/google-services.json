@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394689046191",
+    "project_id": "ebookcart-72a1a",
+    "storage_bucket": "ebookcart-72a1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394689046191:android:b2ae1cadd4abf3881fd65a",
+        "android_client_info": {
+          "package_name": "com.example.e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394689046191-lod22me4tpfmaootok5lkv7vfpbqj3ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx4KZkrg7Bh_ydpo3C49VBJLMT7cJ3v4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394689046191-lod22me4tpfmaootok5lkv7vfpbqj3ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

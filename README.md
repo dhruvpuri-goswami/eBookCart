@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple steps:
 
 1. **Clone the repo**
    ```sh
-   git clone https://github.com/your-username/eBookCart.git
+   git clone https://github.com/dhruvpuri-goswami/eBookCart.git
    ```
 2. **Open the project in Android Studio**
    ```sh
